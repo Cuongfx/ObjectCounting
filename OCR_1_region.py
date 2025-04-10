@@ -180,10 +180,7 @@ class RegionPersistentCounter:
                             # Assign class to this track ID
                             self.track_to_class[track_id] = cls
                             assigned_cls = cls
-                        
-                        # For the YOLO11n model, we'll accept any class that's detected well as a person
-                        # This approach allows us to catch people regardless of which class they're detected as
-                        
+            
                         # Get box coordinates
                         x1, y1, x2, y2 = box
                         
