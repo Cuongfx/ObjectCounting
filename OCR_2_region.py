@@ -32,7 +32,6 @@ class RegionPersistentCounter:
             (self.width, self.height)
         )
         
-        # Initialize the model - stick with yolo11n.pt as requested
         try:
             self.model = YOLO(model_path)
             print(f"Model {model_path} loaded successfully")
@@ -150,10 +149,8 @@ class RegionPersistentCounter:
                     classes = results[0].boxes.cls.cpu().numpy().astype(int)
                     track_ids = results[0].boxes.id.cpu().numpy().astype(int)
                     
-                    # Process all detections - try both class 0 and class 1 for people
                     for i, (box, cls, track_id) in enumerate(zip(boxes, classes, track_ids)):
-                        # For the YOLO11n model, we'll try both class 0 (default person) and class 1
-                        if cls == 0 or cls == 1:  # Try both common person class IDs
+                        if cls == 0:  
                             # Get box coordinates
                             x1, y1, x2, y2 = box
                             
