@@ -238,7 +238,7 @@ class RegionPersistentCounter:
 # Example usage
 if __name__ == "__main__":
     # Video path
-    video_path = "/Users/manhcuongfx/Downloads/ultralytics-main/ultralytics/abc.mp4"
+    video_path = "/path to mp4/abc.mp4"
     
     # Region points
     region_points = [(20, 400), (1080, 400), (1080, 360), (20, 360)]
