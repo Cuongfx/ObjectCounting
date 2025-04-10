@@ -18,4 +18,7 @@ In many computer vision applications, it is crucial to count how many people ent
 1. **Python 3.8+** recommended.  
 2. **CUDA toolkit** (optional) for GPU acceleration if you have a compatible NVIDIA GPU.  
 
+## How to use?
+1. **OCR_1_region.py+** is for counting in one region. The code draws one region and only counts people who enter that region.
+2. **OCR_2_region.py** is for counting in two regions. The code draws two regions and only counts people who enter those regions.
 
